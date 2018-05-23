@@ -32,12 +32,12 @@ class Article(models.Model):
     modified_time = models.DateTimeField()
 
     # 分类 & 标签
-    category = models.ForeignKey(Category)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tags= models.ManyToManyField(Tag, blank = True)
 
     # 作者
     # django.contrib.auth 是 Django 内置的应用，专门用于处理网站用户的注册、登录等流程，User 是 Django 为我们已经写好的用户模型。
-    author = models.ForeignKey(User)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def get_all(self):
         output_string = "Title:" + self.title + "_" + self.sub_title + "\n"
