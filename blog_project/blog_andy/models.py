@@ -2,6 +2,7 @@
 
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Create your models here.
 class Category(models.Model):
@@ -44,9 +45,10 @@ class Article(models.Model):
         output_string += ("body:"+ self.body + "\n")
         return output_string
 
-
-
     def __str__(self):
         return self.title + '_' + self.sub_title
+
+    def get_absolute_url(self):
+        return reverse('blog_andy:detail', kwargs={'pk':self.pk})
 
 

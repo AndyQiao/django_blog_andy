@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from blog_andy.models import Category, Tag, Article
 from django.contrib.auth.models import User
 
@@ -25,4 +25,10 @@ def index(request):
     all_article = Article.objects.all()
     return render(request, 'blog_andy/index.html', context = {
         'post_list':all_article
+    })
+
+def detail(request, pk):
+    ariticle = get_object_or_404(Article, pk=pk)
+    return render(request, 'blog_andy/detail.html', context = {
+        'post':ariticle
     })
