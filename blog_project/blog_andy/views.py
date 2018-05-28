@@ -1,3 +1,4 @@
+import markdown
 from django.shortcuts import render, get_object_or_404
 from blog_andy.models import Category, Tag, Article
 from django.contrib.auth.models import User
@@ -28,7 +29,13 @@ def index(request):
     })
 
 def detail(request, pk):
-    ariticle = get_object_or_404(Article, pk=pk)
+    article = get_object_or_404(Article, pk=pk)
+    article.body = markdown.markdown(article.body,
+                                    extensions=[
+                                        'markdown.extensions.extra',
+                                        'markdown.extensions.codehilite',
+                                        'markdown.extensions.toc',
+                                    ])
     return render(request, 'blog_andy/detail.html', context = {
-        'post':ariticle
+        'post':article
     })
