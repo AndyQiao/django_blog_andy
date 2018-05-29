@@ -25,7 +25,7 @@ SECRET_KEY = '6@a2mt9jo5gad&gb=_bawn%1y7p8iiu5+fz(yeb4c3vv@6_)l-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["www.blogandy.com","127.0.0.1"]
+ALLOWED_HOSTS = ["www.blogandy.com","127.0.0.1","blog.andyqiao.top"]
 
 
 # Application definition
