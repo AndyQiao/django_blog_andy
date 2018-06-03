@@ -1,7 +1,8 @@
 import markdown
 from django.shortcuts import render, get_object_or_404
-from blog_andy.models import Category, Tag, Article
+from .models import Category, Tag, Article
 from django.contrib.auth.models import User
+from comments.forms import CommentForm
 
 # Create your views here.
 
@@ -36,6 +37,17 @@ def detail(request, pk):
                                         'markdown.extensions.codehilite',
                                         'markdown.extensions.toc',
                                     ])
+
+    form = CommentForm()
+
+    comment_list = article.comment_set.all()
+
+    context = {
+        'post':article,
+        'form':form,
+        'comment_list':comment_list
+    }
+
     return render(request, 'blog_andy/detail.html', context = {
         'post':article
     })
