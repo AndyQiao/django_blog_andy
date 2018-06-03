@@ -39,3 +39,18 @@ def detail(request, pk):
     return render(request, 'blog_andy/detail.html', context = {
         'post':article
     })
+
+def archives(request, year, month):
+    articles = Article.objects.filter(
+        created_time__year = year,
+        created_time__month = month).order_by('-created_time')
+    return render(request, 'blog_andy/index.html', context = {
+        'post_list':articles
+    })
+
+def categories(request, pk):
+    cate = get_object_or_404(Category, pk = pk)
+    post_list = Article.objects.filter(category=cate).order_by('-created_time')
+    return render(request, 'blog_andy/index.html', context={
+        'post_list':post_list
+    })
