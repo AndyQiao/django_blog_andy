@@ -5,7 +5,7 @@ register = template.Library()
 
 @register.simple_tag
 def get_recent_posts(num=5):
-    return Article.objects.all().order_by('-created_time')[:num]
+    return Article.objects.all()[:num]
 
 @register.simple_tag
 def archives():

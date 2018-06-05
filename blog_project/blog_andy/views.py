@@ -24,7 +24,6 @@ def index2(request):
     })
 
 def index(request):
-    #all_article = Article.objects.all().order_by('-create_time')
     all_article = Article.objects.all()
     return render(request, 'blog_andy/index.html', context = {
         'post_list':all_article
@@ -54,14 +53,14 @@ def detail(request, pk):
 def archives(request, year, month):
     articles = Article.objects.filter(
         created_time__year = year,
-        created_time__month = month).order_by('-created_time')
+        created_time__month = month)
     return render(request, 'blog_andy/index.html', context = {
         'post_list':articles
     })
 
 def categories(request, pk):
     cate = get_object_or_404(Category, pk = pk)
-    post_list = Article.objects.filter(category=cate).order_by('-created_time')
+    post_list = Article.objects.filter(category=cate)
     return render(request, 'blog_andy/index.html', context={
         'post_list':post_list
     })
