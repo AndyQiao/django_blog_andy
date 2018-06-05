@@ -6,11 +6,11 @@ from blog_andy.models import Article
 class Comment(models.Model):
     name = models.CharField(max_length=128)
     email = models.EmailField(max_length=256)
-    qq = models.CharField(max_length = 128, blank=True)
+    qq = models.CharField(max_length = 128)
     text = models.TextField()
-    created_time = models.DateTimeField()
+    created_time = models.DateTimeField(auto_now_add=True)
     
-    article = models.ForeignKey(Article)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE)
 
     def __str__(selft):
         return '{' + self.text + '}@' + name

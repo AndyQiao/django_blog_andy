@@ -1,8 +1,9 @@
 import markdown
 from django.shortcuts import render, get_object_or_404
+from comments.forms import CommentForm
 from .models import Category, Tag, Article
 from django.contrib.auth.models import User
-from comments.forms import CommentForm
+
 
 # Create your views here.
 
@@ -48,9 +49,7 @@ def detail(request, pk):
         'comment_list':comment_list
     }
 
-    return render(request, 'blog_andy/detail.html', context = {
-        'post':article
-    })
+    return render(request, 'blog_andy/detail.html', context = context)
 
 def archives(request, year, month):
     articles = Article.objects.filter(
