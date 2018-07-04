@@ -1,4 +1,5 @@
-.codehilite .hll { background-color: #49483e }
+.codehilite code, .codehilite pre{color:#fdce93;background-color:#3f3f3f}
+.codehilite .hll { background-color: #222 } 
 .codehilite .c { color: #75715e } /* Comment */
 .codehilite .err { color: #960050; background-color: #1e0010 } /* Error */
 .codehilite .k { color: #66d9ef } /* Keyword */
