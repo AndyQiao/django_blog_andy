@@ -4,7 +4,8 @@
 <html>
 
 <head>
-    <title>AndyQiao(乔聪)的博客</title>
+    {% block title %}
+    {% endblock title %}
 
     <!-- meta -->
     <meta charset="UTF-8">
@@ -28,13 +29,16 @@
     <script src="{% static 'blog_andy/js/modernizr.custom.js' %}"></script>
 </head>
 
+
+
+
 <body>
     <div class="container">
         <header id="site-header">
             <div class="row">
                 <div class="col-md-4 col-sm-5 col-xs-8">
                     <div class="logo">
-                        <h2><a href="{% url 'blog_andy:index'%}">AndyQiao(乔聪)的博客</a></h2>
+                        <h2><a href="{% url 'blog_andy:index'%}"> Andy | 乔聪的博客</a></h2>
                     </div>
                     </div>                    <!-- col-md-4 -->
                     <div class="col-md-8 col-sm-7 col-xs-4 ">
@@ -55,8 +59,6 @@
                 </div>
         </header>
         </div>
-        <div class="copyrights ">Collect from <a href="http://www.cssmoban.com/ ">网页模板</a></div>
-        <div class="copyrights ">Modified by <a href="http://zmrenwu.com/ ">AndyQiao(乔聪)的博客</a></div>
 
         <div class="content-body ">
             <div class="container ">
@@ -102,7 +104,7 @@
                                 {% empty %} 暂无分类 {% endfor %}
                         </div>
 
-                        <div class="widget widget-tag-cloud ">
+                        <!--div class="widget widget-tag-cloud ">
                             <h3 class="widget-title ">标签云</h3>
                             <ul>
                                 <li>
@@ -136,7 +138,7 @@
                                     <a href="# ">jQuery</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div-->
                     </aside>
                 </div>
             </div>
@@ -145,7 +147,7 @@
             <div class="container ">
                 <div class="row ">
                     <div class="col-md-12 ">
-                        <p class="copyright ">&copy 2018 AndyQiao(乔聪)的博客
+                        <p class="copyright ">&copy 2018 - Andy | 乔聪的博客<br>Powered By Andy Qiao
                         </p>
                     </div>
                 </div>
@@ -155,14 +157,14 @@
         <!-- Mobile Menu -->
         <div class="overlay overlay-hugeinc ">
             <button type="button " class="overlay-close "><span class="ion-ios-close-empty "></span></button>
-            <nav>
+            <!--nav>
                 <ul>
                     <li><a href="index.html ">首页</a></li>
                     <li><a href="full-width.html ">博客</a></li>
                     <li><a href="about.html ">关于</a></li>
                     <li><a href="contact.html ">联系</a></li>
                 </ul>
-            </nav>
+            </nav-->
         </div>
 
         <script src="{% static 'blog_andy/js/script.js' %} "></script>
