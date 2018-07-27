@@ -40,6 +40,9 @@ class Article(models.Model):
     # django.contrib.auth 是 Django 内置的应用，专门用于处理网站用户的注册、登录等流程，User 是 Django 为我们已经写好的用户模型。
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    # 浏览量
+    views = models.PositiveIntegerField(default=0) 
+
     def get_all(self):
         output_string = "Title:" + self.title + "_" + self.sub_title + "\n"
         output_string += ("body:"+ self.body + "\n")
@@ -53,5 +56,9 @@ class Article(models.Model):
 
     class Meta:
         ordering = ['-created_time']
+
+    def increase_views(self):
+        self.views += 1
+        self.save(update_fields=['views'])
 
 
