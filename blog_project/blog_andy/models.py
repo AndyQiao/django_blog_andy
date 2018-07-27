@@ -1,5 +1,7 @@
 # coding: utf-8
 
+import markdown
+from django.utils.html import strip_tags
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -47,6 +49,15 @@ class Article(models.Model):
         output_string = "Title:" + self.title + "_" + self.sub_title + "\n"
         output_string += ("body:"+ self.body + "\n")
         return output_string
+    
+    def save(self, *args, **kwargs):
+        if not self.excerpt:
+            md = markdown.Markdown(extensions=[
+                'markdown.extensions.extra',
+                'markdown.extensions.codehilite',
+            ])
+            self.excerpt = strip_tags(md.convert(self.body))[:54]
+        super(Article, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.title + '_' + self.sub_title

@@ -2,5 +2,7 @@
 *sqlite3
 *migrations*
 secrets.json
+secrets_idc.json
+secrets_yf.json
 blog_project/static/*
 env
