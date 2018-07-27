@@ -99,7 +99,10 @@
                             <ul>
                                 {% for cate in get_categories_list %}
                                 <li>
-                                    <a href="{% url 'blog_andy:categories' cate.pk %} ">{{ cate.name }}<span class="post-count "> ({{cate.article_set.count}})</span></a>
+                                    <a href="{% url 'blog_andy:categories' cate.pk %} ">
+                                        {{ cate.name }}
+                                        <span class="post-count "> ({{cate.num_posts}})</span>
+                                    </a>
                                 </li>
                                 {% empty %} 暂无分类 {% endfor %}
                         </div>
