@@ -9,6 +9,7 @@
 
 {% block main %}
     <article class="post post-1">
+
         <header class="entry-header">
             <h1 class="entry-title">{{post.title}}</h1>
             <div class="entry-meta">
@@ -18,6 +19,16 @@
                 <span class="post-author"><a href="#">{{post.author}}</a></span>
                 <span class="comments-link"><a href="#">{{post.comment_set.count}} 评论</a></span>
                 <span class="views-count"><a href="#">{{post.views}}阅读</a></span>
+                <div class="widget widget-tag-cloud ">
+                    <ul>
+                        标签：
+                        {% for tag in post.tags.all %}
+                        <li>
+                            <a href="{%url 'blog_andy:tags' tag.pk %}"># {{tag.name}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </header>
         <div class="entry-content clearfix">

@@ -13,7 +13,7 @@
 
     <!-- css -->
     <!--link rel="stylesheet" href="css/bootstrap.min.css"-->
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!--link rel="stylesheet" href="css/pace.css">
     <link rel="stylesheet" href="css/custom.css"-->
     <link rel="stylesheet" href="{% static 'blog_andy/css/bootstrap.min.css' %}">
@@ -107,41 +107,20 @@
                                 {% empty %} 暂无分类 {% endfor %}
                         </div>
 
-                        <!--div class="widget widget-tag-cloud ">
+                        <div class="widget widget-tag-cloud ">
                             <h3 class="widget-title ">标签云</h3>
+                            {% get_tags as get_tags_list %}
                             <ul>
+                                {% for tag in get_tags_list %}
                                 <li>
-                                    <a href="# ">Django</a>
+                                    <a href="{% url 'blog_andy:tags' tag.pk %} ">
+                                        {{ tag.name }}
+                                        <span class="post-count "> ({{tag.num_posts}})</span>
+                                    </a>
                                 </li>
-                                <li>
-                                    <a href="# ">Python</a>
-                                </li>
-                                <li>
-                                    <a href="# ">Java</a>
-                                </li>
-                                <li>
-                                    <a href="# ">笔记</a>
-                                </li>
-                                <li>
-                                    <a href="# ">文档</a>
-                                </li>
-                                <li>
-                                    <a href="# ">AngularJS</a>
-                                </li>
-                                <li>
-                                    <a href="# ">CSS</a>
-                                </li>
-                                <li>
-                                    <a href="# ">JavaScript</a>
-                                </li>
-                                <li>
-                                    <a href="# ">Snippet</a>
-                                </li>
-                                <li>
-                                    <a href="# ">jQuery</a>
-                                </li>
+                                {% empty %} 暂无标签 {% endfor %}
                             </ul>
-                        </div-->
+                        </div
                     </aside>
                 </div>
             </div>

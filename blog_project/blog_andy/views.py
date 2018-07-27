@@ -111,3 +111,8 @@ class CategoriesView(IndexView):
 #     return render(request, 'blog_andy/index.html', context={
 #         'post_list':post_list
 #     })
+
+class TagView(IndexView):
+    def get_queryset(self):
+        tagVal = get_object_or_404(Tag, pk = self.kwargs.get('pk'))
+        return super(TagView, self).get_queryset().filter(tags=tagVal)
