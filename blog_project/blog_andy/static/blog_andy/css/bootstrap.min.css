@@ -14,8 +14,39 @@ html {
 }
 
 body {
-    margin: 0
+    margin: 0;
 }
+
+p a[href]{
+    /*color:#6795B5;*/
+    color:#0366d6;
+}
+p a[href]:hover{
+    /*color:#6795B5;*/
+    color:#0366d6;
+    text-decoration: underline;    
+}
+
+blockquote{
+    color:#6a737d;
+}
+
+
+
+.entry-content h2{
+    padding-top:1em;
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    border-bottom: 1px solid #eaecef;
+}
+
+.entry-content h4{
+    padding-top:1em;
+    padding-bottom: 0.3em;
+    font-size: 1.5em;
+    border-bottom: 1px solid #eaecef;
+}
+
 
 article,
 aside,
@@ -1899,12 +1930,19 @@ samp {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace
 }
 
-code {
+/*code {
     padding: 2px 4px;
     font-size: 90%;
     color: #c7254e;
     background-color: #f9f2f4;
     border-radius: 4px
+}*/
+code{
+    padding: 0.2em 0.4em;
+    font-size: 85%;
+    background-color: rgba(27,31,35,0.05);
+    /*color:blue;*/
+    border-radius: 3px;
 }
 
 kbd {

@@ -4,8 +4,7 @@
 <html>
 
 <head>
-    {% block title %}
-    {% endblock title %}
+    <title>AndyQiao(乔聪)的博客</title>
 
     <!-- meta -->
     <meta charset="UTF-8">
@@ -13,7 +12,6 @@
 
     <!-- css -->
     <!--link rel="stylesheet" href="css/bootstrap.min.css"-->
-    <!--link rel="stylesheet" href="{% static 'blog_andy/css/ionicons.min.css' %}"-->
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!--link rel="stylesheet" href="css/pace.css">
     <link rel="stylesheet" href="css/custom.css"-->
@@ -30,16 +28,13 @@
     <script src="{% static 'blog_andy/js/modernizr.custom.js' %}"></script>
 </head>
 
-
-
-
 <body>
     <div class="container">
         <header id="site-header">
             <div class="row">
                 <div class="col-md-4 col-sm-5 col-xs-8">
                     <div class="logo">
-                        <h2><a href="{% url 'blog_andy:index'%}"> Andy | 乔聪的博客</a></h2>
+                        <h2><a href="{% url 'blog_andy:index'%}">AndyQiao(乔聪)的博客</a></h2>
                     </div>
                     </div>                    <!-- col-md-4 -->
                     <div class="col-md-8 col-sm-7 col-xs-4 ">
@@ -60,6 +55,8 @@
                 </div>
         </header>
         </div>
+        <div class="copyrights ">Collect from <a href="http://www.cssmoban.com/ ">网页模板</a></div>
+        <div class="copyrights ">Modified by <a href="http://zmrenwu.com/ ">AndyQiao(乔聪)的博客</a></div>
 
         <div class="content-body ">
             <div class="container ">
@@ -67,62 +64,6 @@
                     <main class="col-md-8 ">
                         {% block main %} {% endblock main %}
                     </main>
-                    <aside class="col-md-4 ">
-                        {% block toc %} {% endblock toc %}
-                        <div class="widget widget-recent-posts ">
-                            <h3 class="widget-title ">最新文章</h3>
-                            {% get_recent_posts as recent_post_list%}
-                            <ul>
-                                {% for post in recent_post_list %}
-                                <li>
-                                    <a href="{% url 'blog_andy:detail' post.pk %} ">{{post.title}}</a>
-                                </li>
-                                {% empty %} 暂无文章 {% endfor %}
-                            </ul>
-                        </div>
-                        <div class="widget widget-archives ">
-                            <h3 class="widget-title ">归档</h3>
-                            {% archives as post_dates%}
-                            <ul>
-                                {% for date in post_dates %}
-                                <li>
-                                    <a href="{% url 'blog_andy:archives' date.year date.month %} ">
-                                {{date.year}}年{{date.month}}月
-                            </a>
-                                </li>
-                                {% empty %} 暂无归档 {% endfor %}
-                            </ul>
-                        </div>
-
-                        <div class="widget widget-category ">
-                            <h3 class="widget-title ">分类</h3>
-                            {% get_categories as get_categories_list %}
-                            <ul>
-                                {% for cate in get_categories_list %}
-                                <li>
-                                    <a href="{% url 'blog_andy:categories' cate.pk %} ">
-                                        {{ cate.name }}
-                                        <span class="post-count "> ({{cate.num_posts}})</span>
-                                    </a>
-                                </li>
-                                {% empty %} 暂无分类 {% endfor %}
-                        </div>
-
-                        <div class="widget widget-tag-cloud ">
-                            <h3 class="widget-title ">标签云</h3>
-                            {% get_tags as get_tags_list %}
-                            <ul>
-                                {% for tag in get_tags_list %}
-                                <li>
-                                    <a href="{% url 'blog_andy:tags' tag.pk %} ">
-                                        {{ tag.name }}
-                                        <span class="post-count "> ({{tag.num_posts}})</span>
-                                    </a>
-                                </li>
-                                {% empty %} 暂无标签 {% endfor %}
-                            </ul>
-                        </div
-                    </aside>
                 </div>
             </div>
         </div>
@@ -130,7 +71,7 @@
             <div class="container ">
                 <div class="row ">
                     <div class="col-md-12 ">
-                        <p class="copyright ">&copy 2018 - Andy | 乔聪的博客<br>Powered By Andy Qiao
+                        <p class="copyright ">&copy 2018 AndyQiao(乔聪)的博客
                         </p>
                     </div>
                 </div>
@@ -140,14 +81,14 @@
         <!-- Mobile Menu -->
         <div class="overlay overlay-hugeinc ">
             <button type="button " class="overlay-close "><span class="ion-ios-close-empty "></span></button>
-            <!--nav>
+            <nav>
                 <ul>
                     <li><a href="index.html ">首页</a></li>
                     <li><a href="full-width.html ">博客</a></li>
                     <li><a href="about.html ">关于</a></li>
                     <li><a href="contact.html ">联系</a></li>
                 </ul>
-            </nav-->
+            </nav>
         </div>
 
         <script src="{% static 'blog_andy/js/script.js' %} "></script>

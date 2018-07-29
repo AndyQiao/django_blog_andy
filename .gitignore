@@ -6,3 +6,5 @@ secrets_idc.json
 secrets_yf.json
 blog_project/static/*
 env
+*code-workspace
+__init__.py
