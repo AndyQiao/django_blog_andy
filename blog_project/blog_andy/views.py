@@ -34,12 +34,13 @@ class ArticleDetailView(DetailView):
 
     def get_object(self, queryset=None):
         post = super(ArticleDetailView, self).get_object(queryset=None)
-        post.body = markdown.markdown(post.body,
-                                      extensions=[
+        md = markdown.Markdown(extensions=[
                                           'markdown.extensions.extra',
                                           'markdown.extensions.codehilite',
                                           'markdown.extensions.toc',
-                                      ])
+        ])
+        post.body = md.convert(post.body)
+        post.toc = md.toc
         return post
     
     def get_context_data(self, **kwargs):
