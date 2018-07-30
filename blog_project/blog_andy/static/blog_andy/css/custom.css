@@ -30,6 +30,29 @@
  * 2.0 - General Elements
  */
 
+ p a[href]{
+    /*color:#6795B5;*/
+    color:#0366d6;
+}
+p a[href]:hover{
+    /*color:#6795B5;*/
+    color:#0366d6;
+    text-decoration: underline;    
+}
+
+blockquote{
+    color:#6a737d;
+}
+
+div[article-card]{
+    padding: 15px;
+    position: relative;
+    box-shadow: 1px 1px 30px #e0dddd;
+    box-sizing: border-box;
+    margin: 8px;
+}
+
+
 * {
     outline: none;
 }
@@ -230,15 +253,15 @@ img {
 .entry-title {
     text-align: center;
     font-size: 2em;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-weight: 500;
+    margin-bottom: 0px 20px 0px 20px;
     line-height: 1.6;
-    padding: 10px 20px 0;
+    padding: 0px 0px 10px 0px;
 }
 
 .entry-meta {
     text-align: center;
-    color: #DDDDDD;
+    color: #333;
     font-size: 13px;
     margin-bottom: 30px;
 }

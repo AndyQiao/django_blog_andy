@@ -17,27 +17,6 @@ body {
     margin: 0;
 }
 
-p a[href]{
-    /*color:#6795B5;*/
-    color:#0366d6;
-}
-p a[href]:hover{
-    /*color:#6795B5;*/
-    color:#0366d6;
-    text-decoration: underline;    
-}
-
-blockquote{
-    color:#6a737d;
-}
-
-article[article-card]{
-    padding: 15px;
-    position: relative;
-    box-shadow: 1px 1px 30px #e0dddd;
-    box-sizing: border-box;
-    margin: 8px;
-}
 
 
 .entry-content h2{
