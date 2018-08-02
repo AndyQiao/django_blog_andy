@@ -32,6 +32,14 @@
             </div>
         </header>
         <div class="entry-content clearfix">
+            <blockquote>
+                <p>
+                    本文是乔聪的原创博文，请尊重内容贡献者。欢迎转载，请务必注明出处，文章地址：
+                    <a href="{{post.get_absolute_url}}">
+                        https://blog.andyqiao.top{{post.get_absolute_url}}
+                    </a>
+                </p>
+            </blockquote>
             {{post.body|safe}}
         </div>
     </article>

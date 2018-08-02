@@ -6,6 +6,30 @@
     <title>Andy | 乔聪的博客</title>
 {% endblock title %}
 
+{% block banner-block %}
+<div class="banner-block">
+    <div class="my">
+        <img class="avatar" src="{% static 'blog_andy/img/avatar.jpg' %}">
+        <div class="my-name">乔聪</div>
+        <div class="keep-in-touch">
+            <a href="mailto:qiaoconglovelife@163.com?subject=来自博客">
+                <img class="email touch" src="{% static 'blog_andy/img/email.jpg' %}" >
+            </a>
+            <a href="https://github.com/AndyQiao">
+                <img class="github touch" src="{% static 'blog_andy/img/github.jpg' %}">
+            </a>
+        </div>
+    </div>
+    <div class="my-bulabula">
+        <h2 class="banner-block-title">欢迎来到我的小窝</h2>
+        <p class="banner-p">
+            怀才就像怀孕，是憋不住的。所以我要随性写一些东西，记录一下所看、所做、所想。为什么自己搭建博客？因为博客园实在是太丑了，哈哈……<br>
+            作为一个有追求的后端，我难容忍自己前端代码写得这么烂，我很别扭。但，我会持续优化的，请相信我，我很靠谱的[正经脸]。
+        </p>    
+    </div>
+</div>
+{% endblock banner-block %}
+
 
 
 
