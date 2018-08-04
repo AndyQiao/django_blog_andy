@@ -30,6 +30,18 @@
  * 2.0 - General Elements
  */
 
+ .logo{
+     box-sizing: border-box;
+     float:left;
+     margin-left:10px;
+ }
+
+ .navigator{
+     box-sizing:border-box;
+     float:right;
+ }
+
+
  p a[href]{
     /*color:#6795B5;*/
     color:#0366d6;
@@ -47,24 +59,49 @@ blockquote{
 div[article-card]{
     padding: 15px;
     position: relative;
-    box-shadow: 1px 1px 30px #e0dddd;
-    box-sizing: border-box;
+    /* box-shadow: 1px 1px 30px #e0dddd;
+    box-sizing: border-box; */
+    border-bottom: 1px solid #eee;
     margin: 8px;
 }
 
 .banner-block{
+    margin-top:20px;
     padding:0px;
     box-shadow: 1px 1px 30px #e0dddd;
-    margin:30px 0px 30px 0px;
+    height:250px;
+    
 }
+
+.banner-part{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+    float:left;
+    height:100%;
+}
+
+.banner-part-my{
+    width:30%;
+}
+
+.banner-part-bulabula{
+    width:70%;
+    background-image: url("/static/blog_andy/img/desk.jpg");
+    background-size: cover;
+}
+
 
 .my
 {
     text-align: center;
-    vertical-align:middle;
-    display: inline-block;
-    margin:15px;
-    margin-left:30px;
+    padding-top:8%;
+    vertical-align:middle; 
+    /* margin:15px;
+    margin-left:30px; */
+    
+
+    
 }
 
 .avatar{
@@ -81,20 +118,28 @@ div[article-card]{
 .my-name{
     font-size:20px;
     font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
-    margin:10px
+    margin:10px;
 }
 
 .my-bulabula{
-    vertical-align: middle;
-    display: inline-block;
-    margin-left:20px;
+    color:#fff;
+    box-sizing: content-box;
+
+    padding-top:8%;
+    /* margin:10% 0% 5% 0%; */
 
 }
+
+
+.banner-block-title{
+    text-align: center;
+}
+
 
 .banner-p{
     font-size:15px;
     white-space:normal;
-    margin:50px 0px 0px 0px;
+    margin:30px 0px 0px 20px;
 }
 
 
@@ -112,6 +157,10 @@ div[article-card]{
     margin-bottom: 10px;
     overflow: hidden;
     background-color: #ebebeb;    
+}
+
+#post-id{
+    text-align: left;
 }
 
 
@@ -148,7 +197,7 @@ a:focus {
 
 body {
     color: #444;
-    font-family: 'Lato', sans-serif;
+    font-family:"-apple-system","BlinkMacSystemFont","Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","STHeiti","Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
 }
 
 p {
@@ -233,6 +282,7 @@ img {
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: 20px;
+    margin:10px 10px 20px 0;
 }
 
 
@@ -340,6 +390,35 @@ img {
     line-height: 1.9;
     font-weight: 300;
     color: #000;
+}
+
+
+
+
+.entry-title-index {
+    /* text-align: center; */
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 0px 20px 0px 20px;
+    line-height: 1.6;
+    padding: 0px 0px 10px 0px;
+}
+
+.entry-meta-index {
+    /* text-align: center; */
+    font-size: 15px;
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.entry-content-index {
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.7;
+    font-weight: 300;
+    color: #a3a3a3;
 }
 
 .post-category::after,

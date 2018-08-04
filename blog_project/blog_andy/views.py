@@ -40,7 +40,6 @@ class ArticleDetailView(DetailView):
                                           'markdown.extensions.toc',
         ])
         post.body = md.convert(post.body)
-        post.toc = md.toc
         return post
     
     def get_context_data(self, **kwargs):

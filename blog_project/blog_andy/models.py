@@ -56,7 +56,7 @@ class Article(models.Model):
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
             ])
-            self.excerpt = strip_tags(md.convert(self.body))[:54]
+            self.excerpt = strip_tags(md.convert(self.body))[:100]
         super(Article, self).save(*args, **kwargs)
 
     def __str__(self):

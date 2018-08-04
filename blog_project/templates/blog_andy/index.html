@@ -8,27 +8,32 @@
 
 {% block banner-block %}
 <div class="banner-block">
-    <div class="my">
-        <img class="avatar" src="{% static 'blog_andy/img/avatar.jpg' %}">
-        <div class="my-name">乔聪</div>
-        <div class="keep-in-touch">
-            <a href="mailto:qiaoconglovelife@163.com?subject=来自博客">
-                <img class="email touch" src="{% static 'blog_andy/img/email.jpg' %}" >
-            </a>
-            <a href="https://github.com/AndyQiao">
-                <img class="github touch" src="{% static 'blog_andy/img/github.jpg' %}">
-            </a>
+    <div class="banner-part banner-part-my">
+        <div class="my">
+            <img class="avatar" src="{% static 'blog_andy/img/avatar.jpg' %}">
+            <div class="my-name">Andy | 乔聪</div>
+            <div class="keep-in-touch">
+                <a href="mailto:qiaoconglovelife@163.com?subject=来自博客">
+                    <img class="email touch" src="{% static 'blog_andy/img/email.jpg' %}" >
+                </a>
+                <a href="https://github.com/AndyQiao">
+                    <img class="github touch" src="{% static 'blog_andy/img/github.jpg' %}">
+                </a>
+            </div>
         </div>
     </div>
-    <div class="my-bulabula">
-        <h2 class="banner-block-title">欢迎来到我的小窝</h2>
-        <p class="banner-p">
-            怀才就像怀孕，是憋不住的。所以我要随性写一些东西，记录一下所看、所做、所想。为什么自己搭建博客？因为博客园实在是太丑了，哈哈……<br>
-            作为一个有追求的后端，我难容忍自己前端代码写得这么烂，我很别扭。但，我会持续优化的，请相信我，我很靠谱的[正经脸]。
-        </p>    
+    <div class="banner-part banner-part-bulabula">
+        <div class="my-bulabula">
+                <h2 class="banner-block-title">欢迎来到我的小窝</h2>
+                <p class="banner-p">
+                    怀才就像怀孕，是憋不住的。所以我要随性写一些东西，记录一下所看、所做、所想。为什么自己搭建博客？因为博客园实在是太丑了，哈哈……
+                    虽然我是后端，但作为一个有追求的后端，我难容忍自己前端代码写得这么烂。我会持续优化的，请相信我，我很靠谱的[正经脸]。
+                </p>            
+        </div>
     </div>
 </div>
 {% endblock banner-block %}
+
 
 
 
@@ -38,13 +43,13 @@
 {% for post in post_list %}
     <div class="article-mark" display:none>
         <a href="{{post.get_absolute_url}}" class="article-link">
-            <div article-card class="post post-{{ post.pk }}">
+            <div id="post-id" article-card class="post post-{{ post.pk }}">
                 <header class="entry-header">
-                    <h1 class="entry-title">
+                    <h4 class="entry-title-index">
                         <!--a >{{post.title}}</a-->
                         {{post.title}}
-                    </h1>
-                    <div class="entry-meta">
+                    </h4>
+                    <div class="entry-meta-index">
                         <!--span class="post-category"><a href="#">{{ post.category.name }}</a></span-->
                         <span class="post-category">{{ post.category.name }}</span>
                         <!-- <span class="post-date"><a href="#"><time class="entry-date"
@@ -56,8 +61,8 @@
                         <span class="views-count">{{post.views}}阅读</span>
                     </div>
                 </header>
-                <div class="entry-content clearfix">
-                    <p>{{ post.excerpt }}</p>
+                <div class="entry-content-index clearfix">
+                    <p>{{ post.excerpt }}......</p>
                     <!-- <div class="read-more cl-effect-14">
                         <a href="{{post.get_absolute_url}}" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
                     </div> -->
