@@ -31,14 +31,19 @@
  */
 
  .logo{
+    font-size: 13px;
+    font-weight: 800;
      box-sizing: border-box;
      float:left;
      margin-left:10px;
  }
 
  .navigator{
+    font-size: 13px;
+    font-weight: 800;
      box-sizing:border-box;
      float:right;
+     margin-right:10px;
  }
 
 
@@ -66,7 +71,7 @@ div[article-card]{
 }
 
 .banner-block{
-    margin-top:20px;
+    margin:0px;
     padding:0px;
     box-shadow: 1px 1px 30px #e0dddd;
     height:250px;
@@ -108,8 +113,8 @@ div[article-card]{
     display: inline-block;
     
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     margin-bottom: 10px;
     overflow: hidden;
     background-color: #ebebeb;    
@@ -123,9 +128,7 @@ div[article-card]{
 
 .my-bulabula{
     color:#fff;
-    box-sizing: content-box;
-
-    padding-top:8%;
+    padding-top:5%;
     /* margin:10% 0% 5% 0%; */
 
 }
@@ -275,14 +278,6 @@ img {
     margin: 0;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-}
-
-.logo h2 {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    margin:10px 10px 20px 0;
 }
 
 

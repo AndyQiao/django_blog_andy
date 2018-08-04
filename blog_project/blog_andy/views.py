@@ -12,6 +12,12 @@ class IndexView(ListView):
     template_name = 'blog_andy/index.html'
     context_object_name = 'post_list'
 
+class NewArticleView(IndexView):
+    def get_queryset(self):
+        return super(NewArticleView, self).get_queryset()[:5]
+
+
+
 # def index(request):
 #     all_article = Article.objects.all()
 #     return render(request, 'blog_andy/index.html', context = {
