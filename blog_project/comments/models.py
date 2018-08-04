@@ -4,9 +4,9 @@ from blog_andy.models import Article
 # Create your models here.
 
 class Comment(models.Model):
-    name = models.CharField(max_length=128)
-    email = models.EmailField(max_length=256)
-    qq = models.CharField(max_length = 128)
+    name = models.CharField(max_length=128, blank=True)
+    email = models.EmailField(max_length=256, blank=True)
+    qq = models.CharField(max_length = 128, blank=True)
     text = models.TextField()
     created_time = models.DateTimeField(auto_now_add=True)
     
