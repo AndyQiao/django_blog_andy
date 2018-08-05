@@ -57,6 +57,10 @@ p a[href]:hover{
     text-decoration: underline;    
 }
 
+.navbar-nav {
+    margin: 0px;
+}
+
 blockquote{
     color:#6a737d;
 }
