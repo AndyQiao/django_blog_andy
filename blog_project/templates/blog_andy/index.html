@@ -46,14 +46,10 @@
             <div id="post-id" article-card class="post post-{{ post.pk }}">
                 <header class="entry-header">
                     <h4 class="entry-title-index">
-                        <!--a >{{post.title}}</a-->
                         {{post.title}}
                     </h4>
                     <div class="entry-meta-index">
-                        <!--span class="post-category"><a href="#">{{ post.category.name }}</a></span-->
                         <span class="post-category">{{ post.category.name }}</span>
-                        <!-- <span class="post-date"><a href="#"><time class="entry-date"
-                            datetime="{{post.created_time}}">{{post.created_time}}</time></a></span--> 
                         <span class="post-date"><time class="entry-date"
                             datetime="{{post.created_time}}">{{post.created_time}}</time></span>
                             <span class="post-author">{{ post.author }}</span>
@@ -63,9 +59,6 @@
                 </header>
                 <div class="entry-content-index clearfix">
                     <p>{{ post.excerpt }}......</p>
-                    <!-- <div class="read-more cl-effect-14">
-                        <a href="{{post.get_absolute_url}}" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
-                    </div> -->
                 </div>
             </div>
         </a>
