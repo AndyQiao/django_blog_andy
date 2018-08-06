@@ -30,6 +30,8 @@
  * 2.0 - General Elements
  */
 
+
+
  .logo{
     font-size: 13px;
     font-weight: 800;
@@ -78,7 +80,7 @@ div[article-card]{
     margin:0px;
     padding:0px;
     box-shadow: 1px 1px 30px #e0dddd;
-    height:250px;
+    height:300px;
     
 }
 
@@ -89,6 +91,8 @@ div[article-card]{
     float:left;
     height:100%;
 }
+
+
 
 .banner-part-my{
     width:30%;
@@ -104,7 +108,7 @@ div[article-card]{
 .my
 {
     text-align: center;
-    padding-top:8%;
+    padding-top:5%;
     vertical-align:middle; 
     /* margin:15px;
     margin-left:30px; */
@@ -117,22 +121,22 @@ div[article-card]{
     display: inline-block;
     
     border-radius: 50%;
-    width: 85px;
-    height: 85px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 10px;
     overflow: hidden;
     background-color: #ebebeb;    
 }
 
 .my-name{
-    font-size:20px;
+    font-size:15px;
     font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
     margin:10px;
 }
 
 .my-bulabula{
     color:#fff;
-    padding-top:5%;
+    padding-top:7%;
     /* margin:10% 0% 5% 0%; */
 
 }
@@ -149,6 +153,15 @@ div[article-card]{
     margin:30px 0px 0px 20px;
 }
 
+@media only screen and (max-width:1000px) {
+    .banner-part-bulabula {
+        display:none;
+    }
+    .banner-part-my{
+        width:100%;
+    }
+}
+
 
 
 
@@ -159,8 +172,8 @@ div[article-card]{
 .touch{
     display: inline-block;
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     margin-bottom: 10px;
     overflow: hidden;
     background-color: #ebebeb;    
@@ -361,6 +374,7 @@ img {
 
 .content-body {
     padding-bottom: 4em;
+    padding-left:10px;
 }
 
 .post {
